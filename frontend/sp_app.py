@@ -56,7 +56,7 @@ if uploaded_file is not None:
                     st.error(f"Ошибка от сервера: {response.status_code} - {response.text}")
 
             except requests.exceptions.ConnectionError:
-                st.error("Не удалось подключиться к серверу. Убедитесь, что бэкенд запущен по адресу http://127.0.0.1:8000")
+                st.error("Не удалось подключиться к серверу. Убедитесь, что бэкенд запущен")
             except Exception as e:
                 st.error(f"Произошла непредвиденная ошибка: {e}")
 
