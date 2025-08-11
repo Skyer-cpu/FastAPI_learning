@@ -44,11 +44,10 @@ class BirdClassifier:
         
         return {
             "bird_species": predicted_class,
-            # --- ИСПРАВЛЕНИЕ ЗДЕСЬ ---
             "confidence": f"{confidence.item()*100:.2f}%" 
         }
 
-# Используем новые абсолютные пути для создания экземпляра
+
 model_handler = BirdClassifier(
     model_path=MODEL_PATH,
     class_names_path=CLASS_NAMES_PATH
